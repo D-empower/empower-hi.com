@@ -1,7 +1,9 @@
-/* Global background in deep navy */
+/* ===== Strategic Empowerment – full site styles (replace file) ===== */
+
+/* Global layout & colors */
 body {
-  background-color: #071B37;   /* deep navy */
-  color: #F5F5F5;              /* light text for contrast */
+  background-color: #071B37;        /* deep navy */
+  color: #F5F5F5;                    /* light text for contrast */
   font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   max-width: 900px;
   margin: 0 auto;
@@ -9,81 +11,77 @@ body {
   line-height: 1.6;
 }
 
-/* Headings in soft cyan for visibility */
+/* Headings */
 h1, h2, h3 {
-  color: #93DFED;
+  color: #93DFED;                    /* soft cyan */
+  letter-spacing: 0.2px;
 }
 
-/* Links in bright teal-blue, hover cyan */
+/* Links */
 a {
-  color: #3F72B3;
+  color: #3F72B3;                    /* medium blue */
   text-decoration: none;
 }
-a:hover {
+a:hover, a:focus {
   color: #93DFED;
   text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
-/* Nav bar adjustments */
+/* ---------- Header: logo + nav right-justified ---------- */
+.site-header {
+  display: flex;
+  flex-direction: column;            /* logo above nav */
+  align-items: flex-end;             /* right-justify both */
+  gap: .5rem;
+  margin-bottom: 1rem;
+}
+
+/* Clickable logo (no halo, no plate) */
+.brand-link { display: inline-block; padding: 0; background: none; box-shadow: none; border-radius: 0; }
+.brand-logo {
+  max-height: 80px;                  /* adjust 80–120px to taste */
+  height: auto;
+  width: auto;
+  filter: none;                      /* remove glow */
+  image-rendering: auto;
+}
+
+/* Navigation */
 nav {
-  margin: 1rem 0 2rem;
   font-weight: 600;
   font-size: 1.05rem;
+  text-align: right;                 /* keep links aligned right */
+  margin: 0 0 2rem 0;
 }
 nav a {
   color: #93DFED;
-  margin: 0 0.75rem;
+  margin-left: .75rem;
   border-bottom: 2px solid transparent;
 }
-nav a:hover {
-  border-bottom-color: #3F72B3;
-}
+nav a:hover { border-bottom-color: #3F72B3; }     /* medium blue */
 nav a.active {
   color: #FFFFFF;
-  border-bottom-color: #0067A6;
+  border-bottom-color: #0067A6;                   /* teal-blue */
 }
 
-/* Footer styling */
+/* Footer */
 footer {
   border-top: 1px solid #3F72B3;
   padding-top: 1rem;
   text-align: center;
   color: #93DFED;
 }
-/* Header layout */
-.site-header {
-  text-align: center;
-  margin-bottom: 1rem;
-}
 
-/* Clickable logo */
-.brand-link {
-  display: inline-block;
-  padding: .5rem .75rem;
-  border-radius: 10px;
-  background: rgba(255,255,255,.06);      /* subtle light plate for contrast */
-  box-shadow: 0 0 24px rgba(0,0,0,.25);
-}
-
-/* Logo image: scale + glow for dark backgrounds */
-.brand-logo {
-  max-height: 120px;
-  height: auto;
-  width: auto;
-  filter:
-    drop-shadow(0 0 10px rgba(255,255,255,.35))
-    drop-shadow(0 2px 6px rgba(0,0,0,.35));
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: crisp-edges;
-}
-/* Smaller on phones */
+/* Small screens */
 @media (max-width: 600px) {
-  .brand-logo { max-height: 80px; }
+  .brand-logo { max-height: 64px; }
+  nav { font-size: 1rem; }
 }
 
-/* Soft guardrails against casual copying (cannot fully prevent) */
+/* Light deterrent against casual copying (does not fully prevent) */
 .no-copy {
   -webkit-user-drag: none;
   user-select: none;
-  pointer-events: none;   /* clicks pass through to the <a> so it stays clickable */
+  pointer-events: none;  /* clicks pass through to the surrounding <a> */
 }
