@@ -105,3 +105,4 @@ footer {
 
 /* Light deterrent against casual copying (does not fully prevent) */
 .no-copy { -webkit-user-drag: none; user-select: none; pointer-events: none; }
+
