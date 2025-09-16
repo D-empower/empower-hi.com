@@ -1,10 +1,6 @@
 <nav style="margin-bottom: 2em;">
-  <a href="{{ '/' | relative_url }}" 
-     class="{% if page.url == '/' %}active{% endif %}">Home</a> |
-  <a href="{{ '/services.html' | relative_url }}" 
-     class="{% if page.url contains '/services' %}active{% endif %}">Services</a> |
-  <a href="{{ '/projects.html' | relative_url }}" 
-     class="{% if page.url contains '/projects' %}active{% endif %}">Projects</a> |
-  <a href="{{ '/contact.html' | relative_url }}" 
-     class="{% if page.url contains '/contact' %}active{% endif %}">Contact</a>
+  <a href="{{ '/' | relative_url }}" class="{% if page.url == '/' %}active{% endif %}">Home</a> |
+  <a href="{{ '/services.html' | relative_url }}" class="{% if page.url contains '/services' %}active{% endif %}">Services</a> |
+  <a href="{{ '/projects.html' | relative_url }}" class="{% if page.url contains '/projects' %}active{% endif %}">Projects</a> |
+  <a href="{{ '/contact.html' | relative_url }}" class="{% if page.url contains '/contact' %}active{% endif %}">Contact</a>
 </nav>
