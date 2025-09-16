@@ -1,0 +1,45 @@
+/* Custom site overrides for Primer theme */
+
+/* General site tweaks */
+body {
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  line-height: 1.6;
+}
+
+/* Navigation bar */
+nav {
+  margin: 1rem 0 2rem;
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+nav a {
+  color: #0366d6; /* GitHub blue */
+  text-decoration: none;
+  margin: 0 0.75rem;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Header */
+header h1 {
+  margin-bottom: 0.25rem;
+}
+
+header h1 a {
+  color: #111;
+  text-decoration: none;
+}
+
+/* Footer */
+footer {
+  border-top: 1px solid #e1e4e8;
+  padding-top: 1rem;
+  text-align: center;
+  color: #555;
+}
