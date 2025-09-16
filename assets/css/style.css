@@ -3,7 +3,7 @@
 /* Global layout & colors */
 body {
   background-color: #071B37;        /* deep navy */
-  color: #F5F5F5;                    /* light text for contrast */
+  color: #F5F5F5;                   /* light text for contrast */
   font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   max-width: 900px;
   margin: 0 auto;
@@ -13,13 +13,13 @@ body {
 
 /* Headings */
 h1, h2, h3 {
-  color: #93DFED;                    /* soft cyan */
+  color: #93DFED;                   /* soft cyan */
   letter-spacing: 0.2px;
 }
 
 /* Links */
 a {
-  color: #3F72B3;                    /* medium blue */
+  color: #3F72B3;                   /* medium blue */
   text-decoration: none;
 }
 a:hover, a:focus {
@@ -31,15 +31,21 @@ a:hover, a:focus {
 /* ---------- Header: logo + nav right-justified ---------- */
 .site-header {
   display: flex;
-  flex-direction: column;            /* logo above nav */
-  align-items: flex-end;             /* right-justify both */
+  flex-direction: column;           /* logo above nav */
+  align-items: flex-end;            /* right-justify both */
   gap: .5rem;
   margin-bottom: 1rem;
 }
 
-.brand-link { display: inline-block; padding: 0; background: none; box-shadow: none; border-radius: 0; }
+.brand-link {
+  display: inline-block;
+  padding: 0;
+  background: none;
+  box-shadow: none;
+  border-radius: 0;
+}
 .brand-logo {
-  max-height: 80px;                  /* adjust 80–120px to taste */
+  max-height: 80px;                 /* adjust 80–120px to taste */
   height: auto;
   width: auto;
   filter: none;
@@ -51,7 +57,8 @@ nav {
   font-weight: 600;
   font-size: 1.05rem;
   text-align: right;
-  margin: 0 0 2rem 0;
+  margin: 0 0 2.5rem 0;             /* extra bottom margin for breathing room */
+  padding-bottom: 0.5rem;           /* ensures spacing under menu */
 }
 nav a {
   color: #93DFED;
@@ -64,18 +71,18 @@ nav a.active {
   border-bottom-color: #0067A6;
 }
 
-/* ---------- Homepage intro with funnel image (updated) ---------- */
+/* ---------- Homepage intro with funnel image ---------- */
 .intro-section {
   display: flex;
-  align-items: flex-start;           /* align image top with text top */
-  gap: 2.25rem;                      /* extra space to give the funnel room */
+  align-items: flex-start;          /* align image top with text top */
+  gap: 2.25rem;                     /* extra space to give the funnel room */
   margin-bottom: 2rem;
-  margin-top: -60px;                 /* LIFT: align funnel top near bottom of header logo */
+  margin-top: -40px;                /* lift section so funnel top aligns with logo bottom */
 }
 
 /* Funnel image */
 .intro-image img {
-  max-width: 260px;                  /* tasteful/classy size (adjust 220–300px) */
+  max-width: 260px;                 /* classy size (adjust 220–300px) */
   height: auto;
   display: block;
 }
@@ -83,21 +90,21 @@ nav a.active {
 /* Copy column */
 .intro-text {
   flex: 1;
-  text-align: left;                  /* match your reference layout */
+  text-align: left;                 /* clean readable alignment */
 }
 
 /* Paragraph spacing and section heading */
 .intro-text p { margin: 0 0 1rem 0; }
 
 .intro-text h3 {
-  margin: 1rem 0 0.5rem 0;
+  margin: 1.25rem 0 0.5rem 0;
   color: #93DFED;
   font-weight: 700;
 }
 
 /* Bullets */
 .intro-text ul {
-  margin: 0.5rem 0 0 1.25rem;        /* normal readable indent */
+  margin: 0.5rem 0 0 1.25rem;       /* readable indent */
   padding: 0;
 }
 .intro-text li { margin: 0.4rem 0; }
@@ -108,18 +115,19 @@ footer {
   padding-top: 1rem;
   text-align: center;
   color: #93DFED;
+  margin-top: 3rem;
 }
 
 /* Small screens: stack image above text */
 @media (max-width: 700px) {
   .brand-logo { max-height: 64px; }
-  nav { font-size: 1rem; }
+  nav { font-size: 1rem; margin-bottom: 2rem; }
 
   .intro-section {
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
-    margin-top: -20px;               /* lighter lift on phones */
+    margin-top: -20px;              /* lighter lift on phones */
   }
   .intro-image img { max-width: 100%; }
 }
