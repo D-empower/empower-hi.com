@@ -1,52 +1,74 @@
-/* Custom site overrides for Primer theme */
+/* Strategic Empowerment – brand overrides for Primer */
+/* Palette extracted from EEaaS Presentation B.pdf
+   Primary deep navy:   #071B37
+   Medium blue:         #3F72B3
+   Bold teal-blue:      #0067A6
+   Soft cyan accent:    #93DFED
+   Neutral dark:        #111
+   Light border:        #e1e4e8
+*/
 
-/* General site tweaks */
+/* Layout & typography */
 body {
   font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   max-width: 900px;
   margin: 0 auto;
   padding: 1.5rem;
   line-height: 1.6;
+  color: #111;
 }
 
-/* Navigation bar */
+/* Headings pick up the deep navy */
+h1, h2, h3 {
+  color: #071B37;
+  letter-spacing: 0.2px;
+}
+
+/* Links = bold teal-blue, hover underline + cyan accent */
+a {
+  color: #0067A6;
+  text-decoration: none;
+}
+a:hover, a:focus {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+}
+
+/* Nav bar */
 nav {
-  margin: 1rem 0 2rem;
+  margin: 0.5rem 0 2rem;
   font-weight: 600;
   font-size: 1.05rem;
 }
-
 nav a {
-  color: #0366d6; /* GitHub blue */
-  text-decoration: none;
-  margin: 0 0.75rem;
+  margin: 0 0.75rem 0 0;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
 }
-
 nav a:hover {
-  text-decoration: underline;
+  border-bottom-color: #93DFED; /* soft cyan accent */
+}
+nav a.active {
+  color: #071B37;               /* deep navy when active */
+  border-bottom-color: #0067A6; /* bold teal-blue underline */
 }
 
-/* Header */
-header h1 {
-  margin-bottom: 0.25rem;
-}
+/* Header & footer */
+header h1 { margin-bottom: 0.25rem; }
+header h1 a { color: #071B37; text-decoration: none; }
 
-header h1 a {
-  color: #111;
-  text-decoration: none;
-}
-
-/* Footer */
 footer {
   border-top: 1px solid #e1e4e8;
   padding-top: 1rem;
   text-align: center;
-  color: #555;
+  color: #3B3B3B;
 }
-/* Active nav link */
-nav a.active {
-  font-weight: 700;
-  color: #000;  /* darker to stand out */
-  border-bottom: 2px solid #0366d6;
-  padding-bottom: 2px;
+
+/* Callout (optional utility) */
+.callout {
+  background: #93DFED1A; /* 10% cyan */
+  border-left: 4px solid #0067A6;
+  padding: 0.75rem 1rem;
+  margin: 1rem 0;
 }
