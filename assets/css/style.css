@@ -37,14 +37,10 @@ a:hover, a:focus {
   margin-bottom: 1rem;
 }
 
-/* Clickable logo (no halo, no plate) */
 .brand-link { display: inline-block; padding: 0; background: none; box-shadow: none; border-radius: 0; }
 .brand-logo {
   max-height: 80px;                  /* adjust 80–120px to taste */
-  height: auto;
-  width: auto;
-  filter: none;                      /* remove glow */
-  image-rendering: auto;
+  height: auto; width: auto; filter: none; image-rendering: auto;
 }
 
 /* Navigation */
@@ -54,16 +50,37 @@ nav {
   text-align: right;                 /* keep links aligned right */
   margin: 0 0 2rem 0;
 }
-nav a {
-  color: #93DFED;
-  margin-left: .75rem;
-  border-bottom: 2px solid transparent;
+nav a { color: #93DFED; margin-left: .75rem; border-bottom: 2px solid transparent; }
+nav a:hover { border-bottom-color: #3F72B3; }
+nav a.active { color: #FFFFFF; border-bottom-color: #0067A6; }
+
+/* ---------- Homepage intro with funnel image ---------- */
+.intro-section {
+  display: flex;
+  align-items: flex-start;           /* align image top with text */
+  gap: 2.25rem;                      /* extra space to give the funnel room */
+  margin-bottom: 2rem;
 }
-nav a:hover { border-bottom-color: #3F72B3; }     /* medium blue */
-nav a.active {
-  color: #FFFFFF;
-  border-bottom-color: #0067A6;                   /* teal-blue */
+
+.intro-image img {
+  max-width: 240px;                  /* tasteful size for “classy” feel */
+  height: auto;
+  display: block;
+  border-radius: 6px;                /* subtle polish; remove if you want sharp edges */
 }
+
+.intro-text {
+  flex: 1;
+  text-align: right;                 /* right-justify intro paragraphs and bullets */
+}
+
+/* Right-justified list polish */
+.intro-text ul {
+  list-style-position: inside;       /* keeps bullets close to right edge when right-aligned */
+  padding: 0;
+  margin: 0.75rem 0 0 0;
+}
+.intro-text li { margin: .35rem 0; }
 
 /* Footer */
 footer {
@@ -73,15 +90,18 @@ footer {
   color: #93DFED;
 }
 
-/* Small screens */
-@media (max-width: 600px) {
+/* Small screens: stack image above text */
+@media (max-width: 700px) {
   .brand-logo { max-height: 64px; }
   nav { font-size: 1rem; }
+
+  .intro-section {
+    flex-direction: column;
+    align-items: flex-end;           /* keep text right-aligned below image */
+    gap: 1rem;
+  }
+  .intro-image img { max-width: 100%; }
 }
 
 /* Light deterrent against casual copying (does not fully prevent) */
-.no-copy {
-  -webkit-user-drag: none;
-  user-select: none;
-  pointer-events: none;  /* clicks pass through to the surrounding <a> */
-}
+.no-copy { -webkit-user-drag: none; user-select: none; pointer-events: none; }
