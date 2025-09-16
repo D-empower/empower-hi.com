@@ -6,10 +6,17 @@
     <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
   </head>
   <body>
-    <header>
-      <h1><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
-      {% include nav.html %}
-    </header>
+<header class="site-header">
+  <a class="brand-link" href="{{ '/' | relative_url }}" aria-label="Strategic Empowerment home">
+    <img
+      src="{{ '/assets/images/logo-se.png' | relative_url }}"
+      alt="Strategic Empowerment, LLC"
+      class="brand-logo no-copy"
+      draggable="false"
+      oncontextmenu="return false">
+  </a>
+  {% include nav.html %}
+</header>
     <main>
       {{ content }}
     </main>
