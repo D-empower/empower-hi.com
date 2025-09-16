@@ -40,47 +40,67 @@ a:hover, a:focus {
 .brand-link { display: inline-block; padding: 0; background: none; box-shadow: none; border-radius: 0; }
 .brand-logo {
   max-height: 80px;                  /* adjust 80–120px to taste */
-  height: auto; width: auto; filter: none; image-rendering: auto;
+  height: auto;
+  width: auto;
+  filter: none;
+  image-rendering: auto;
 }
 
 /* Navigation */
 nav {
   font-weight: 600;
   font-size: 1.05rem;
-  text-align: right;                 /* keep links aligned right */
+  text-align: right;
   margin: 0 0 2rem 0;
 }
-nav a { color: #93DFED; margin-left: .75rem; border-bottom: 2px solid transparent; }
+nav a {
+  color: #93DFED;
+  margin-left: .75rem;
+  border-bottom: 2px solid transparent;
+}
 nav a:hover { border-bottom-color: #3F72B3; }
-nav a.active { color: #FFFFFF; border-bottom-color: #0067A6; }
+nav a.active {
+  color: #FFFFFF;
+  border-bottom-color: #0067A6;
+}
 
-/* ---------- Homepage intro with funnel image ---------- */
+/* ---------- Homepage intro with funnel image (updated) ---------- */
 .intro-section {
   display: flex;
-  align-items: flex-start;           /* align image top with text */
+  align-items: flex-start;           /* align image top with text top */
   gap: 2.25rem;                      /* extra space to give the funnel room */
   margin-bottom: 2rem;
+  margin-top: -60px;                 /* LIFT: align funnel top near bottom of header logo */
 }
 
+/* Funnel image */
 .intro-image img {
-  max-width: 240px;                  /* tasteful size for “classy” feel */
+  max-width: 260px;                  /* tasteful/classy size (adjust 220–300px) */
   height: auto;
   display: block;
-  border-radius: 6px;                /* subtle polish; remove if you want sharp edges */
 }
 
+/* Copy column */
 .intro-text {
   flex: 1;
-  text-align: right;                 /* right-justify intro paragraphs and bullets */
+  text-align: left;                  /* match your reference layout */
 }
 
-/* Right-justified list polish */
-.intro-text ul {
-  list-style-position: inside;       /* keeps bullets close to right edge when right-aligned */
-  padding: 0;
-  margin: 0.75rem 0 0 0;
+/* Paragraph spacing and section heading */
+.intro-text p { margin: 0 0 1rem 0; }
+
+.intro-text h3 {
+  margin: 1rem 0 0.5rem 0;
+  color: #93DFED;
+  font-weight: 700;
 }
-.intro-text li { margin: .35rem 0; }
+
+/* Bullets */
+.intro-text ul {
+  margin: 0.5rem 0 0 1.25rem;        /* normal readable indent */
+  padding: 0;
+}
+.intro-text li { margin: 0.4rem 0; }
 
 /* Footer */
 footer {
@@ -97,12 +117,16 @@ footer {
 
   .intro-section {
     flex-direction: column;
-    align-items: flex-end;           /* keep text right-aligned below image */
+    align-items: flex-start;
     gap: 1rem;
+    margin-top: -20px;               /* lighter lift on phones */
   }
   .intro-image img { max-width: 100%; }
 }
 
 /* Light deterrent against casual copying (does not fully prevent) */
-.no-copy { -webkit-user-drag: none; user-select: none; pointer-events: none; }
-
+.no-copy {
+  -webkit-user-drag: none;
+  user-select: none;
+  pointer-events: none;
+}
