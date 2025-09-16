@@ -11,9 +11,10 @@ title: Home
 
 At Strategic Empowerment, mission is to help modernize Hawaii’s facilities with precision, respect, and resilience—delivering infrastructure upgrades that preserve resident comfort, enhance building efficiency, and protect the long-term value of the property. Guided by local expertise, proven field execution, and financial stewardship, our team is committed to executing a quiet, coordinated transformation that honors the building’s legacy while preparing it for the next generation.
 
+
 We deliver modernization **as a service**—electrical infrastructure, submeters, chillers, energy management, solar, batteries, and water—integrated into one seamless, cyber-hardened framework. We stay in the boat with you: our income depends on performance, so your success is our success.
 
-**What this means for your property**
+What this means for your property
 - Predictable, defensible budgets tied to verified savings  
 - Local oversight of contractors with transparent quality control  
 - Transfer of financial and technical risk away from the Association  
